@@ -13,6 +13,7 @@ Heparin Resistance is defined by the inability to reach therapeutic level with r
   - Anti-Xa (I.U./mL)
 
 
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/eid_example.png" width="30%">
 
 ## Objective
 
@@ -26,6 +27,13 @@ Predict whether a child will be Heparin Resistance after a period of measurement
 Patients in both PICU and Cticu who had Heparin administered at any time and had either PTT or Anti-Xas measurement
 -Total Patients: 14940
 -Target Patients: 708  (around 4.74%)  
+
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/Population_Distribution.png" width="30%">
+
+## Preprocessing
+#### Create a list of resonable binary target varaibla that defines Heparin Resistance
+- Patient acquired Heparin of 30/35/40 units in each encounter at any time
+  - Maximun of Heparin Dosage larger than 30/35/0
 
 
 ```
