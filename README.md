@@ -25,10 +25,14 @@ Predict whether a child will be Heparin Resistance after a period of measurement
 
 ## Data Set
 Patients in both PICU and Cticu who had Heparin administered at any time and had either PTT or Anti-Xas measurement
--Total Patients: 14940
--Target Patients: 708  (around 4.74%)  
+-Total Patients: 14940 
 
 <img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/Population_Distribution.png" width="30%">
+
+-Target Patients: 708  (around 4.74%) 
+
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/total_age_bin.png" width="25%">
+
 
 ## Preprocessing
 ### Create a list of resonable binary target varaibla that defines Heparin Resistance
@@ -44,70 +48,20 @@ Patients in both PICU and Cticu who had Heparin administered at any time and had
   
 Then, we have the following table shows the distribution of classes and age-bin for each defined target variable.
 <img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/Y_Distribution.png" width="80%">
-  
-```
-Give the example
-```
 
-And repeat
+### Create a time reference (in hour) for the initial administration of Heparin
 
-```
-until finished
-```
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/Absolute_Time.png" width="20%"><img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/hour.png" width="20.5%">
 
-End with an example of getting some data out of the system or using it for a little demo
+### Cut data for a specific time period after the first administration of Heparin
+-0 hour 
+  - cut the data at hour 0, where is right at the time of the Administration of Heparin 
+  - predict whether a child will be Heparin Resistance using the data before Heparin Administered.
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/0-hr_cut.png" width="30%">
 
-## Running the tests
+-24 hours
+  - cut the data at hour 24, where is 24 hours after the first administration of Heparin
+   - predict whether a child will be Heparin Resistance after 24 hours of the Heparin Administration.
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/24-hr_cut.png" width="31%">
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
