@@ -33,12 +33,17 @@ Patients in both PICU and Cticu who had Heparin administered at any time and had
 ## Preprocessing
 ### Create a list of resonable binary target varaibla that defines Heparin Resistance
 
+- Heparin dosage of 35/40/45 unites in each encounter at any time
+  - Children who aquired maximum of Heparin Dosage larger than 30/35/40 are considered to be Heparin Resistance.
 - Titration Difficulty: Some kids were harder to titrate
   - Children who had number of Heparin Titration larger than 15/20 are considered to be Heparin Resistance
 - Two lab indicator that monitor the effect of Heparin
   - Children who had either maximum of PTT less than 50 or maximum of Anti-Xa less than 0.3 are considered to be Heparin Resistance.
 - Antithrombin: When Heperin Resistance occurs, increasing dosage of Heparin is insufficient. Then, we treat the kid with the Antithrombin Supplemantation, which active the anticoagulate effect of Heparin.
   - Children who had Antithrombin administered are considered to be Heparin Resistance.
+  
+Then, we have the following table shows the distribution of classes and age-bin for each defined target variable.
+<img src="https://github.com/yx1201/Prediction-of-Heparin-Resistance----Pediatric-Data/blob/master/picture/Y_Distribution.png" width="80%">
   
 ```
 Give the example
